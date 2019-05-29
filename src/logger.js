@@ -1,6 +1,5 @@
 /* eslint no-console:0 */
 
-import color from 'colorette';
 import { isFunction, isNil } from 'lodash';
 
 function log(message, userFn, colorFn) {
@@ -31,17 +30,17 @@ class Logger {
   }
 
   warn(message) {
-    log(message, this._warn, color.yellow);
+    log(message, this._warn);
   }
 
   error(message) {
-    log(message, this._error, color.red);
+    log(message, this._error);
   }
 
   deprecate(method, alternative) {
     const message = `${method} is deprecated, please use ${alternative}`;
 
-    log(message, this._deprecate, color.yellow);
+    log(message, this._deprecate);
   }
 }
 
