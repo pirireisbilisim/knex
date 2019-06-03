@@ -62,7 +62,7 @@ assign(Client_MSSQL.prototype, {
     // TODO: remove mssql implementation all together and use tedious directly
 
     /* istanbul ignore next */
-    const mssqlVersion = require('mssql/package.json').version;
+    const mssqlVersion = '4.1.0'; //require('mssql/package.json').version;
     /* istanbul ignore next */
     if (mssqlVersion === '4.1.0') {
       mssqlTedious.ConnectionPool.prototype.release = release;
